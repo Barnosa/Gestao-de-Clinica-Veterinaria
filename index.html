@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>VetSys - Gestão de Clínica Veterinária</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-container">
+    <div class="header">
+        <div class="logo">
+            <h1>VetSys Clinic</h1>
+            <p>Gestão inteligente • Clientes, Animais, Consultas, Vacinas</p>
+        </div>
+        <div class="stats-badge" id="globalStats">
+            Dados sincronizados
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="card" id="cardCliente">
+            <div class="card-header">
+                <h2>Clientes</h2>
+                <button class="btn-add" onclick="openModal('cliente')">+ Novo</button>
+            </div>
+            <div class="list-area" id="listaClientes">
+            </div>
+            <div class="relation-note">1 Cliente â†’ N Animais</div>
+        </div>
+
+        <div class="card" id="cardAnimal">
+            <div class="card-header">
+                <h2>Animais</h2>
+                <button class="btn-add" onclick="openModal('animal')">+ Novo</button>
+            </div>
+            <div class="list-area" id="listaAnimais"></div>
+            <div class="relation-note">Um Animal â†’ N Consultas | N Vacinas</div>
+        </div>
+
+        <div class="card" id="cardVeterinario">
+            <div class="card-header">
+                <h2>Veterinários</h2>
+                <button class="btn-add" onclick="openModal('veterinario')">+ Novo</button>
+            </div>
+            <div class="list-area" id="listaVeterinarios"></div>
+            <div class="relation-note">1 Veterinário â†’ N Consultas</div>
+        </div>
+
+        <div class="card" id="cardConsulta">
+            <div class="card-header">
+                <h2>Consultas</h2>
+                <button class="btn-add" onclick="openModal('consulta')">+ Nova</button>
+            </div>
+            <div class="list-area" id="listaConsultas"></div>
+            <div class="relation-note">Animal + Veterinário</div>
+        </div>
+
+        <div class="card" id="cardVacina">
+            <div class="card-header">
+                <h2>Vacinas</h2>
+                <button class="btn-add" onclick="openModal('vacina')">+ Registrar</button>
+            </div>
+            <div class="list-area" id="listaVacinas"></div>
+            <div class="relation-note">Aplicada em Animal</div>
+        </div>
+    </div>
+    <footer>
+        Sistema completo com relacionamentos: Cliente 1:N Animais | Animal 1:N Consultas e Vacinas | Veterinário 1:N Consultas
+    </footer>
+</div>
+
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal" id="dynamicModal">
+        <h3 id="modalTitle">Título</h3>
+        <div id="modalFields"></div>
+        <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+            <button class="btn-save" id="saveModalBtn">Salvar</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
