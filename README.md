@@ -2,6 +2,10 @@
 
 Sistema de Gestão de Clínica Veterinária desenvolvido para controlar clientes, animais, veterinários, consultas e vacinas.
 
+## 🔗 Acesse o Projeto
+
+**Deploy:** https://gestao-clinica-veterinaria.netlify.app/
+
 ## Funcionalidades
 
 * Cadastro de clientes
@@ -24,7 +28,3 @@ Sistema de Gestão de Clínica Veterinária desenvolvido para controlar clientes
 * HTML
 * CSS
 * JavaScript
-
-## Objetivo
-
-Aplicar conceitos de modelagem de banco de dados, relacionamentos entre entidades e operações CRUD em um sistema de gestão veterinária.
